@@ -163,3 +163,66 @@ data/processed/ — données nettoyées prêtes Power BI
 PowerBI_Dashboard.pbix — rapport Power BI
 
 README.md — documentation
+
+---
+
+## 🚀 Extension proposée : Site / Application d’analyse des états de synthèse comptable
+
+Si vous souhaitez transformer ce projet en **application orientée finance/comptabilité**, voici une feuille de route pragmatique.
+
+### 1) Objectif produit
+
+Construire une application web qui permet de :
+
+- importer les états financiers (bilan, compte de résultat, flux de trésorerie),
+- calculer automatiquement les principaux ratios,
+- détecter les tendances, anomalies et signaux de risque,
+- générer un tableau de bord décisionnel + un rapport synthétique.
+
+### 2) Fonctionnalités MVP (version 1)
+
+- **Import multi-format** : Excel, CSV, PDF structuré
+- **Normalisation comptable** : mapping automatique des rubriques
+- **Analyse des ratios** : liquidité, solvabilité, rentabilité, rotation
+- **Comparaison temporelle** : N vs N-1, variation absolue et %
+- **Scoring santé financière** : score simple (0–100) avec seuils
+- **Restitution** : dashboard interactif + export PDF du diagnostic
+
+### 3) Stack recommandée
+
+- **Front-end** : Streamlit (démarrage rapide) ou React + Chart.js
+- **Back-end** : Python (FastAPI)
+- **Data** : pandas + pydantic (validation) + SQLite/PostgreSQL
+- **IA optionnelle** : résumé automatique des points d’attention
+
+### 4) Pipeline de traitement conseillé
+
+1. Ingestion des documents comptables
+2. Nettoyage & standardisation des libellés
+3. Contrôles de cohérence (totaux, équilibre actif/passif)
+4. Calcul des indicateurs financiers
+5. Détection d’anomalies (règles + statistiques)
+6. Visualisation et génération de recommandations
+
+### 5) KPIs/ratios à afficher en priorité
+
+- Fonds de roulement, BFR, Trésorerie nette
+- Current ratio, Quick ratio
+- Marge brute, marge opérationnelle, marge nette
+- ROA, ROE
+- Endettement global, autonomie financière
+- Couverture des charges financières
+
+### 6) Plan de réalisation en 4 sprints
+
+- **Sprint 1** : modèle de données + import Excel/CSV + contrôles qualité
+- **Sprint 2** : moteur de calcul des ratios + API FastAPI
+- **Sprint 3** : interface dashboard + filtres (période, entité)
+- **Sprint 4** : scoring, export PDF, documentation et déploiement
+
+### 7) Livrables attendus
+
+- Application web déployée
+- Jeu de données d’exemple
+- Documentation utilisateur
+- Guide méthodologique des ratios et seuils
